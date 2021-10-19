@@ -14,11 +14,14 @@ int main()
     int Clave[N];
     char Nombre[N][50];
     float Estatura[N];
-    float Sueldo[N];Captura(Clave,Nombre,Estatura,Sueldo);
+    float Sueldo[N];
+    
+    Captura(Clave,Nombre,Estatura,Sueldo);
     BuscaMasAlto(Estatura);
     OrdenaSueldo(Clave,Nombre,Estatura,Sueldo);
     Imprime(Clave,Nombre,Estatura,Sueldo);
 }
+
 void Captura(int Clave[N],char Nombre[N][50],float Estatura[N],float Sueldo[N])
 {
     int i;
@@ -56,7 +59,9 @@ void OrdenaSueldo(int Clave[N],char Nombre[N][50],float Estatura[N],float Sueldo
 {
     int i,j,TempClave;
     char TempNombre[50];
-    float TempEstatura,TempSueldo;for(i=0;i<N-1;i++)
+    float TempEstatura,TempSueldo;
+    
+    for(i=0;i<N-1;i++)
     {
     for(j=0;j<N-1;j++)
     {
@@ -76,6 +81,7 @@ void OrdenaSueldo(int Clave[N],char Nombre[N][50],float Estatura[N],float Sueldo
     }
     }
 }
+
 void Imprime(int Clave[N],char Nombre[N][50],float Estatura[N],float Sueldo[N])
 {
     int i;
